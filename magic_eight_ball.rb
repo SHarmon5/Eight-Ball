@@ -13,20 +13,8 @@ require "colorize"
  
 
   def welcome
-    puts "***Welcome to the Magic Eight Ball***"
-    puts "Please enter your question for the Eight Ball..."
-    # sleep(2)
-    # puts "Thinking......"
-    # sleep(2)
-    # puts "This is  a tough one!"
-    # sleep(1)
-    # puts "I'll get it......."
-    # sleep(1)
-    # puts "one more sec..... please"
-    # sleep(1)
-    # puts "Be patient!!"
-    # sleep(1)
-    
+    puts "***Welcome to the Magic Eight Ball***".colorize(:white)
+    puts "Please enter your question for the Eight Ball...".colorize(:yellow)  
   end
   def user_answer
     welcome
@@ -40,6 +28,16 @@ require "colorize"
         puts "Sorry to see you leave"
         exit
       else
+        puts "Thinking......".colorize(:yellow)
+        sleep(2)
+        puts "This is  a tough one!".colorize(:light_red)
+        sleep(2)
+        puts "I'll get it.......".colorize(:light_red)
+        sleep(2)
+        puts "one more sec..... please".colorize(:red)
+        sleep(2)
+        puts "Be patient!!".colorize(:red)
+        sleep(2)
         puts @answers.sample
         puts "Do you have another question y/n?"
         reply = gets.to_s.strip
@@ -56,11 +54,11 @@ require "colorize"
 
 
   def egg_menu
-    puts "What would you like to do with the answers?"
-    puts " 1) Add answers"
-    puts " 2) Reset the answers"
-    puts " 3) Print answers"
-    puts " 4) Return to Eight Ball"
+    puts "What would you like to do with the answers?".colorize(:green)
+    puts " 1) Add answers".colorize(:green)
+    puts " 2) Reset the answers".colorize(:green)
+    puts " 3) Print answers".colorize(:green)
+    puts " 4) Return to Eight Ball".colorize(:green)
   end
 
 
