@@ -10,6 +10,7 @@ require "colorize"
   "You should see someone about that", "your mom does", "Yeah, that'll do"]
     @cloned_answers = @answers.clone
     
+  # ***********easter egg phrase is "change answers" and "quit" to end*******************
  
 
   def welcome
@@ -96,6 +97,7 @@ require "colorize"
     puts "OK, What answer do you want to add?"
       new_answer = gets.to_s.strip
     @answers << new_answer
+    @answers.uniq!
     puts "Do you want to add another answer? y/n"
     value = gets.to_s.strip
     value == "y" ? add_answer : egg_answer
